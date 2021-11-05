@@ -4,6 +4,10 @@ class Ship {
     this.binenInsan = bineninsan;
     this.gemidekiInsan = mevcutyolcu;
   }
-}
-const ship = new Ship("Maria");
+  setSail (denizde) {
+      return this.startingPort = denizde;
+};
+};
+
+const ship = new Ship("Dover");
 module.exports = Ship;
