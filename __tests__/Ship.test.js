@@ -1,18 +1,18 @@
 const Ship = require("../src/Ship");
 describe("ship", () => {
   it("can be instantiated", () => {
-    expect(Ship).toBeInstanceOf(Object);
+    const ship = new Ship("Dover");
+    expect(ship).toBeInstanceOf(Ship);
   });
-});
-it("has a starting port", () => {
-  const ship = new Ship("Dover");
-  expect(ship.startingPort).toBe("Dover");
+  it("has a starting port", () => {
+    const ship = new Ship("Dover");
+    expect(ship.currentPort).toBe("Dover");
+  });
 });
 describe("the journey started", () => {
   it("can set sail", () => {
     const ship = new Ship("Dover");
-    //Ship.mevcutyolcu = 0
     ship.setSail();
-    expect(ship.startingPort).toBeFalsy();
+    expect(ship.setSail()).toBeFalsy();
   });
 });
