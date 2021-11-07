@@ -21,10 +21,14 @@ describe("the journey started", () => {
     expect(ship.currentPort).toBeFalsy();
   });
 });
-describe("the ship can dock", () => {
-  const port = new Port("Dover");
-  const ship = new Ship(port);
-  const calais = new Port("Calais");
+describe('the ship can dock', () => {
+it('can dock at a different port', () => {
+  const dover = new Port('Dover');
+  const ship = new Ship(dover);
+
+  const calais = new Port('Calais');
   ship.dock(calais);
+
   expect(ship.currentPort).toBe(calais);
+});
 });
