@@ -5,8 +5,8 @@ describe("Port", () => {
   });
 });
 describe('if the port has a name', () => {
- xit('port name', () => {
+ it('port name', () => {
   const port = new Port("Girne");
-  expect(Port).toContain(port.name);
+  expect(port.hasOwnProperty("name")).toBe(true);
  })
 });
