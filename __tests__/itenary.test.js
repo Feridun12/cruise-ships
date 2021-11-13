@@ -11,6 +11,7 @@ describe('itinerary', () => {
       });
       it("can have ports", () => {
       const dover = new Port ("Dover");
+      const port = jest.fn();
       const calais = new Port ("Calais");
       const itinerary = new Itinerary([dover, calais]);
       expect(itinerary.ports).toEqual([dover, calais]);
